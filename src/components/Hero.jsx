@@ -5,6 +5,7 @@ import { gsap} from "gsap";
 
 export default function Hero() {
   const heroRef = useRef(null);
+  const videoRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -15,23 +16,28 @@ export default function Hero() {
       tl.from(".right-hero", {
         y: 80, 
         opacity: 0, 
-        delay: 2.5,
+        delay: 1.5,
         duration: 0.85
       });
       tl.from(".hero-socials a", {
         y: 20,
         opacity: 0,
         stagger: 0.2
-      }, "+=5.5");
+      }, "+=3.5");
     }, heroRef);
 
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 1.5;
+    }
+
     return () => ctx.revert();
+
   }, []);
 
   return (
 
     <section className="hero" ref={heroRef}>
-      <video className="hero-video" autoPlay muted>
+      <video className="hero-video" ref={videoRef} autoPlay muted>
         <source src="/bg-white.mp4" type="video/mp4" />
       </video>
       <div className="right-hero">

@@ -14,7 +14,7 @@ export default function Hero() {
       
       tl.from(".left-nav", {
         y: 80, 
-        delay: 8,
+        delay: 5,
         stagger: 0.2
       });
       tl.from(".nav-links a", {
@@ -36,6 +36,5 @@ export default function Hero() {
         <a href="#contact">Contact</a>
       </div>
     </nav>
-    
   );
 }
