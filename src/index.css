@@ -73,20 +73,16 @@ body {
 }
 
 .hero-socials {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-  z-index: 999;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
 }
 
-
-.hero img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+.hero-socials svg {
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
 }
 
 .hero h1 {
@@ -105,14 +101,40 @@ body {
   text-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
 
-
-.lin, .gith{
-  color: #ffffff;
-}
-
 .name {
   color: #e28b39;
 }
+
+/* About Me */
+
+.about-section {
+  display: flex;
+  padding: 60px 20px;
+  height: 120vh;
+  margin: 0;
+  background-color: rgb(19, 29, 29);
+  align-items: center;
+  justify-content: center;
+  border-radius: 40%;
+}
+
+.about-section img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-left: 40px;
+}
+
+.full-about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  text-align: right;
+  padding: 0 20%;
+}
+
+
 
 .project-card {
   background-color: #222;
